@@ -89,26 +89,26 @@ services:
       - 7080:7080 
 
 #Billin app frontend service
-  billingapp-front-prod:
-    build:
-      context: ./angular 
-    deploy:   
-        resources:
-           limits: 
-              cpus: "0.15"
-              memory: 250M
-#recusos dedicados, mantiene los recursos disponibles del host para el contenedor
-           reservations:
-              cpus: "0.1"
-              memory: 128M
-    #container_name: billingApp-front
-    depends_on:     
-      -  billingapp-back-prod
-#rango de puertos para escalar   
-    networks:
-     - env_prod 
-    ports:
-      - 82:80 
+#   billingapp-front-prod:
+#     build:
+#       context: ./angular 
+#     deploy:   
+#         resources:
+#            limits: 
+#               cpus: "0.15"
+#               memory: 250M
+# #recusos dedicados, mantiene los recursos disponibles del host para el contenedor
+#            reservations:
+#               cpus: "0.1"
+#               memory: 128M
+#     #container_name: billingApp-front
+#     depends_on:     
+#       -  billingapp-back-prod
+# #rango de puertos para escalar   
+#     networks:
+#      - env_prod 
+#     ports:
+#       - 80:80 
 
 
 #Billin app frontend service
