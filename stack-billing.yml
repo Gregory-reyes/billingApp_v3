@@ -9,7 +9,7 @@ services:
     networks:
      - env_prod
     ports:
-      - 5435:5432
+      - 5436:5432
     volumes:
         #allow *.sql, *.sql.gz, or *.sh and is execute only if data directory is empty
       - ./dbfiles:/docker-entrypoint-initdb.d
