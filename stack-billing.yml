@@ -108,7 +108,7 @@ services:
     networks:
      - env_prod 
     ports:
-      - 82:80 
+      - 80:80 
 
 
 #Billin app frontend service
